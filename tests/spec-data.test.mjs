@@ -107,5 +107,5 @@ test('each wrong-order reason names a real step', () => {
 test('every station except the carry has its own scene, and the page names none that is missing', () => {
   const missing = SJ.STATIONS.filter(s => s.key !== 'carry' && !existsSync(new URL(`../sketchbook/scenes/${s.key}.jpg`, import.meta.url))).map(s => s.key);
   assert.deepEqual(missing, []);
-  assert.ok(existsSync(new URL('../sketchbook/scenes/building.jpg', import.meta.url)));
+  for (const still of ['building', 'lift-patient', 'lift-carrier', 'lift-closed', 'lift-shaft']) assert.ok(existsSync(new URL(`../sketchbook/scenes/${still}.jpg`, import.meta.url)), still);
 });

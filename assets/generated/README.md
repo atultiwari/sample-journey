@@ -33,8 +33,19 @@
 | scenes/qc.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 3811b7a6-7844-4fb3-9489-eaec2ba4690c | Awaiting approval |
 | scenes/run.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 926c4da1-6a74-4ec2-8244-3f34ab3a6595 | Awaiting approval |
 | scenes/check.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | a372b097-4bf2-4329-8621-cfa52e037b4d | Awaiting approval |
-| scenes/sign.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | abb021d9-d71c-4d9e-b7b3-dc0fa3fc0292 | Awaiting approval |
-| scenes/critical.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 7eded0aa-4b14-4c5c-a365-e5ec07184c4d | Awaiting approval |
+| scenes/sign.png (first version) | Rejected by the author: back to the door | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | abb021d9-d71c-4d9e-b7b3-dc0fa3fc0292 | Rejected |
+| scenes/critical.png (first version) | Rejected by the author: back to the door | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 7eded0aa-4b14-4c5c-a365-e5ec07184c4d | Rejected |
 | scenes/report.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 63a45246-718f-4e1c-ad99-51670c548fd1 | Awaiting approval |
 | scenes/store.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 72f0d478-6cf9-4dbb-aca1-e6648927c1a3 | Awaiting approval |
 | scenes/discard.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 21bb5e2d-1ccf-474e-9c28-31e065ccb997 | Awaiting approval |
+| plates/lift.png | Empty generic lift, doors open | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 605b7e8a-4699-43e0-8439-1357abea100c | Awaiting approval |
+| plates/shaft.png | One storey of lift shaft, repeats | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 5105d9d2-01ad-4b9a-967e-1da791fde566 | Awaiting approval |
+| plates/lift-closed.png | Lift, doors closed (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | cc08136b-4978-4769-b98b-790bc7566a48 | Awaiting approval |
+| scenes/lift-patient.png | Patient in the lift (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 90b0e7dd-5215-4829-bc92-a2d081f4cf9b | Awaiting approval |
+| scenes/lift-carrier.png | Carrier in the lift (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | f9549fe9-fafa-4c20-8717-badaf99c5c29 | Awaiting approval |
+| plates/cabin2.png | New chamber. Rejected by the author: microscope too far | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | cb411b24-0038-4175-9147-bad339deabc3 | Rejected |
+| scenes (first chamber sign) | Rejected: microscope too far | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 3a27eaa1-7162-4b1e-9cbe-b9aed27a590e | Rejected |
+| scenes (first chamber critical) | Rejected: microscope too far | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 692405f3-be01-401d-9513-d2ef51b62f5f | Rejected |
+| plates/cabin3.png | Chamber, desk rearranged (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 992387be-cfb8-422b-b8f8-d88ebf62c433 | Awaiting approval |
+| scenes/sign.png | Pathologist at the microscope (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | f33f5813-2fb5-4a2a-9d83-37a5841e8019 | Awaiting approval |
+| scenes/critical.png | Pathologist on the phone with a form (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 69cc13ba-b061-4552-ab86-1f00af87679d | Awaiting approval |

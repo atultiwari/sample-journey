@@ -391,7 +391,7 @@ For you to judge. None of these goes into the figure as a criticism.
 | 2 | Who carries samples (job title)? Do they use a rigid box and leak-proof bags for the internal trip? Which lift? | "Sample carrier", triple pack (112A p.28), "lift" |
 | 3 | What is Shalby's critical limit for potassium, and who phones whom? | Show "above the lab's critical limit, per documented policy", with no number. Lab staff phone the doctor |
 | 4 | Report shows different Received On for CBC (03:14) and serum (03:28), though all were collected at 03:00. Is that central receiving or departmental? | Show both as departmental receipt after one central scan |
-| 5 | Keep the real doctors' names (Ref. By and the two pathologists) on a report with a fictional patient? You said change only patient details, but it puts real names on a teaching report with a critical value | **Keep them as you instructed. Please confirm that the doctors are fine with this.** Signature image not copied either way |
+| 5 | Keep the real doctors' names (Ref. By and the two pathologists) on a report with a fictional patient? You said change only patient details, but it puts real names on a teaching report with a critical value | Answered: keep the names, confirmed by Dr. Tiwari for the public page, 2 Nov 2026 |
 | 6 | Use the Shalby logo and the NABL mark (MC-2422)? | Logo yes, from your report. **NABL mark no,** because I have not read NABL's rules on using the mark |
 | 7 | Which two identifiers does Shalby use? | Full name and PID |
 | 8 | Do you have coagulation and blood culture examples to show? | No values shown |
@@ -405,7 +405,8 @@ The floating cut-away floors are gone. Each place is its own hand-inked sketch, 
 
 | Place | Floor | Stations |
 |---|---|---|
-| Building sketch, from your photo of SG Shalby Hospital | | Opening, Carry, and the journeys between floors |
+| Building sketch, from your photo of SG Shalby Hospital | | Opening, arriving, and the report going down |
+| A generic lift, not placed in the building | | The patient going down, CARRY |
 | Doctor's consulting room | Ground | ORDER |
 | Main lobby: registration counter and information desk | Ground | REGISTER |
 | Sample collection room | Basement | READY, 2 IDs, CONSENT, DRAW, LABEL, CARE, PACK |
@@ -417,7 +418,9 @@ The floating cut-away floors are gone. Each place is its own hand-inked sketch, 
 | Report counter | Ground | REPORT |
 | Storage and waste | 9th | STORE, DISCARD |
 
-Journeys between floors are shown on the building sketch and are not stations: arriving at the hospital, the patient going down to the basement, and the report going from the 9th floor to the ground floor. The position of the 9th floor and the lift on the sketch is indicative.
+Journeys between floors are not stations. Arriving and the report going from the 9th floor to the ground floor are shown on the building sketch; the patient going down is shown in the generic lift. Where the real lift is, is not known, so the building sketch shows no lift or route. Floor labels on it are indicative.
+
+The lift ride is made from still images and code: the closed-door picture slides apart, and one storey of shaft repeats behind the car. Only the stills cost image credits.
 
 **Tube filling.** Tubes are drawn stopping at their draw volume, with space below the cap. The citrate tube shows a fill mark. Source, separate from NABL and NABH: BD Vacutainer Tech Talk VS9016 (05/11): "minimum fill indicator etched into the tube" on plastic citrate tubes; filling is to the stated draw volume. No source found for a printed mark on EDTA tubes, so none is drawn.
 

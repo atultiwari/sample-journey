@@ -27,9 +27,6 @@ function sjTag(s0, state) {
   return act('station', sjPill(x, y, `${s0.num} ${s0.label}`, { bg, col: done ? '#7b7466' : INK, sw: on1 ? 2 : 1.2 }), `data-i="${s0.num - 1}" style="cursor:pointer"`);
 }
 
-const sjBoxArt = (x, y) => `<circle cx="${f(x)}" cy="${f(y - 6)}" r="30" fill="var(--accent,#f4b829)" opacity=".35"/>`
-  + `<rect x="${f(x - 19)}" y="${f(y - 21)}" width="38" height="27" rx="4" fill="#3c6fb0" stroke="${INK}" stroke-width="1.4"/>`
-  + `<rect x="${f(x - 8)}" y="${f(y - 26)}" width="16" height="6" rx="2" fill="none" stroke="${INK}" stroke-width="1.4"/>`;
 const sjFormArt = (x, y) => `<rect x="${f(x - 11)}" y="${f(y - 14)}" width="22" height="28" rx="1.5" fill="#fffdf6" stroke="${INK}" stroke-width="1.2"/>`
   + [-7, -2, 3, 8].map(d => `<path d="M${f(x - 7)} ${f(y + d)}h14" stroke="#7d756a" stroke-width="1"/>`).join('');
 
@@ -41,39 +38,25 @@ function sjDrawRing(s1, now) {
   return `<ellipse cx="${f(S0.spot[0])}" cy="${f(S0.spot[1])}" rx="${f(r)}" ry="${f(r * .72)}" fill="none" stroke="#d6502c" stroke-width="2.4"/>`;
 }
 
-/* the building: the three places a sample's journey uses, and whoever is moving between them */
-function sjRouteLine(y0, y1, col, dash, now) {
-  const a = Math.min(y0, y1), b = Math.max(y0, y1), off = matchMedia('(prefers-reduced-motion:reduce)').matches ? 0 : -now * 26 * Math.sign(y0 - y1);
-  return `<path d="M${SJ_ROUTE.x} ${f(a)}V${f(b)}" fill="none" stroke="${col}" stroke-width="3" stroke-dasharray="${dash}" stroke-dashoffset="${f(off)}" stroke-linecap="round"/>`;
-}
+/* the building: which floor is which, and the report on its way down. The curve is the report's path, not a lift. */
 const sjPins = () => SJ_PINS.map(p => {
-  const w = p.text.length * 7.4 + 16;
-  return `<circle cx="${SJ_ROUTE.x}" cy="${p.y}" r="5" fill="#fff" stroke="${INK}" stroke-width="1.6"/>`
-    + `<path d="M${SJ_ROUTE.x} ${p.y}H${f(SJ_ROUTE.x - 22)}" stroke="${INK}" stroke-width="1.2"/>` + sjPill(Math.max(w / 2 + 6, SJ_ROUTE.x - 22 - w / 2), p.y, p.text, { size: 11.5, bg: '#fffdf6' });
+  const [x, y] = p.at, w = p.text.length * 7.4 + 16;
+  return `<circle cx="${x}" cy="${y}" r="5" fill="#fff" stroke="${INK}" stroke-width="1.6"/><path d="M${x} ${y}H${x - 22}" stroke="${INK}" stroke-width="1.2"/>` + sjPill(x - 22 - w / 2, y, p.text, { size: 11.5, bg: '#fffdf6' });
 }).join('');
 function sjDrawBuilding(s1, now) {
-  const carrying = !s1.hop && !s1.whole && !s1.userWhole && SJ.STATIONS[s1.at].key === 'carry';
-  let s = sjRouteLine(SJ_ROUTE.basement, SJ_ROUTE.ninth, '#fffdf6', '2 7', 0) + sjPins();
-  if (carrying) {
-    const y = sjRouteY(sjCarryLift(s1.u));
-    s += sjRouteLine(SJ_ROUTE.basement, y, '#d6502c', '8 7', now) + sjBoxArt(SJ_ROUTE.x, y + 8) + sjPill(SJ_ROUTE.x + 62, y, `LIFT: ${sjFloorName(sjCarryLift(s1.u))}`, { bg: '#17332e', col: '#fff' });
-    s += sjPill(SJ_ROUTE.x + 74, Math.min(y + 32, 600), 'BY HAND', { size: 11.5 });
-  }
-  if (!s1.hop) return s;
-  const H = SJ_HOPS[s1.hop.key], u = ease(s1.hop.u);
-  if (H.kind === 'patient') {
-    const y = SJ_ROUTE.ground + (SJ_ROUTE.basement - SJ_ROUTE.ground) * u;
-    s += sjRouteLine(SJ_ROUTE.ground, y, '#d6502c', '8 7', now) + `<circle cx="${SJ_ROUTE.x}" cy="${f(y)}" r="9" fill="#d6502c" stroke="${INK}" stroke-width="1.6"/>`;
-  }
-  if (H.kind === 'report') {
-    const y = SJ_ROUTE.ninth + (SJ_ROUTE.ground - SJ_ROUTE.ninth) * u;
-    s += sjRouteLine(SJ_ROUTE.ninth, y, '#3f8f6a', '8 7', now) + sjFormArt(SJ_ROUTE.x, y);
-  }
-  return s;
+  if (!s1.hop || s1.hop.kind !== 'report') return sjPins();
+  const [a, b] = [SJ_PINS[0].at, SJ_PINS[1].at], u = ease(s1.hop.u), bow = [660, (a[1] + b[1]) / 2];
+  const at = t => [0, 1].map(i => (1 - t) * (1 - t) * a[i] + 2 * t * (1 - t) * bow[i] + t * t * b[i]), [x, y] = at(u);
+  const off = matchMedia('(prefers-reduced-motion:reduce)').matches ? 0 : -now * 26;
+  return sjPins() + `<path d="M${a[0]} ${a[1]}Q${bow[0]} ${bow[1]} ${b[0]} ${b[1]}" fill="none" stroke="#3f8f6a" stroke-width="3" stroke-dasharray="8 7" stroke-dashoffset="${f(off)}"/>` + sjFormArt(x, y);
 }
 
 function sjScene(s1, now) {
   const place = sjPlaceNow(s1);
+  if (place === 'lift') {
+    const tag = s1.hop ? '' : sjTag(SJ.STATIONS[SJ.IDX.carry], sjStateOf(SJ.IDX.carry, s1));
+    return { svg: sjDrawLift(s1) + tag };
+  }
   if (place === 'building') {
     const caption = s1.hop ? SJ_HOPS[s1.hop.key].caption : '';
     const show = s1.hop && s1.hop.kind === 'enter' ? '' : sjDrawBuilding(s1, now);

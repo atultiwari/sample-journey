@@ -242,10 +242,11 @@ function sjBuildPlates() {
     im.dataset.place = name;
     layer.appendChild(im);
   });
+  sjBuildLift(layer);
   svg.insertBefore(layer, document.getElementById('art'));
 }
 function sjFadePlates(place, a) {
-  document.querySelectorAll('#sjPlates image').forEach(im => {
+  document.querySelectorAll('#sjPlates [data-place]').forEach(im => {
     const now = +im.getAttribute('opacity'), want = im.dataset.place === place ? 1 : 0, next = now + (want - now) * a;
     im.setAttribute('opacity', Math.abs(next - want) < .01 ? want : next.toFixed(3));
   });
@@ -263,6 +264,7 @@ function sjCam() {
   svg.setAttribute('viewBox', `${f(sjVB.x)} ${f(sjVB.y)} ${f(sjVB.w)} ${f(sjVB.h)}`);
   INK_K = sjVB.w / INK_REF_VB;
   sjFadePlates(sjPictureNow(st), still ? 1 : .16);
+  sjSyncLift(st);
 }
 function sjCentre(container, el) {
   if (!container || !el) return;
