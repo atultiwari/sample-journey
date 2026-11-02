@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+# Reference standards and real report PDFs stay outside this repo (licensed or sensitive).
+*.private.*
+shots/
+# Full-size image originals stay local. The page uses the web-sized copies in sketchbook/scenes/.
+assets/generated/**/*.png
+assets/generated/*.png

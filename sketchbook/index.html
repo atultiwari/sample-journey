@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample Journey · Shalby</title>
+<meta name="description" content="Sample Journey: an interactive teaching figure of a laboratory sample's journey at Shalby, from the doctor's order to the patient's report. Patient details are made up.">
+<script src="../shared/switcher.js" defer></script>
+</head>
+<body>
+<script>
+  // any script error is recorded on <html data-errors>, so the device checks can see it
+  addEventListener('error', e => { document.documentElement.dataset.errors = (document.documentElement.dataset.errors || '') + ' ' + e.message + ';'; });
+</script>
+<script src="engine.js"></script>
+<script src="../shared/sj-spec.js"></script>
+<script src="sj-places.js"></script>
+<script src="sj-window.js"></script>
+<script src="sj-overlay.js"></script>
+<script src="sj-app.js"></script>
+<script src="sj-ui.js"></script>
+</body>
+</html>
