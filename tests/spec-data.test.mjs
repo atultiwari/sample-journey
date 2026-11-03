@@ -46,7 +46,9 @@ test('the gaps Dr. Tiwari listed each have a card', () => {
 test('critical alert and routine report are separate stations, critical first', () => {
   const crit = SJ.STATIONS.find(s => s.key === 'critical'), rep = SJ.STATIONS.find(s => s.key === 'report');
   assert.ok(crit.num < rep.num);
-  assert.match(crit.name, /read-back/i);
+  // the heading names both ways Shalby tells the doctor; the call with read-back stays the required part
+  assert.match(crit.name, /phone call/i); assert.match(crit.name, /message/i);
+  assert.match(crit.note, /repeats the value back/i); assert.match(crit.records, /read-back/i);
   assert.doesNotMatch(rep.name, /critical/i);
 });
 

@@ -255,7 +255,7 @@ function sjCam() {
   const svg = document.getElementById('fig');
   if (!svg) return;
   const r = svg.getBoundingClientRect(), aspect = r.width && r.height ? r.width / r.height : 4 / 3;
-  const wish = sjCamWish(st, sjIsPhone()), target = sjClampFrame(wish.c[0], wish.c[1], wish.w, aspect);
+  const wish = sjCamWish(st, sjIsPhone()), target = sjClampFrame(wish.c[0], wish.c[1], wish.w, aspect, wish.fit);
   const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
   if (!sjVB) sjVB = { ...target };
   const a = still ? 1 : .09, next = {};

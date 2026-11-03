@@ -23,9 +23,9 @@ const SJ_SPOTS = {
   qc: { place: 'analyser', spot: [338, 208], tag: [640, 420], cam: 760 },
   run: { place: 'analyser', spot: [202, 308], tag: [180, 470], cam: 700 },
   check: { place: 'analyser', spot: [902, 272], tag: [885, 130], cam: 700 },
-  sign: { place: 'cabin', spot: [362, 280], tag: [620, 240], cam: 860 },
-  critical: { place: 'cabin', spot: [470, 285], tag: [690, 470], cam: 860 },
-  report: { place: 'counter', spot: [475, 304], tag: [500, 420], cam: 800 },
+  sign: { place: 'cabin', spot: [368, 258], tag: [620, 240], cam: 860 },
+  critical: { place: 'cabin', spot: [230, 345], tag: [400, 600], cam: 950, split: [[240, 270], [710, 270]] },
+  report: { place: 'counter', spot: [225, 270], tag: [250, 600], cam: 950, split: [[240, 270], [710, 270]] },
   store: { place: 'storage', spot: [205, 250], tag: [400, 420], cam: 800 },
   discard: { place: 'storage', spot: [710, 290], tag: [480, 520], cam: 800 },
 };
@@ -48,11 +48,12 @@ const SJ_PINS = [
 const SJ_HOPS = {
   order: { kind: 'enter', dur: 2.6, title: 'Arriving at the hospital', text: 'Mr Demo Patient comes in through the main entrance. The OPD and registration are on the ground floor.', caption: 'To the OPD, ground floor' },
   ready: { kind: 'patient', dur: 6, title: 'The patient goes down in the lift', text: 'After registration, the patient takes the lift from the ground floor down to the sample collection room in the basement.', caption: 'Patient: ground floor to basement' },
-  report: { kind: 'report', dur: 3.2, title: 'The report leaves the lab', text: 'The authorised report is released. The hard copy is collected at the report counter on the ground floor. The sample itself stays in the lab.', caption: 'Report: 9th floor to ground floor' },
 };
 
 const sjSpotOf = key => SJ_SPOTS[key];
-const sjClampFrame = (cx, cy, wish, aspect) => {
+/* fit = show the whole width even if the frame is taller than the picture: a split scene must never lose a panel */
+const sjClampFrame = (cx, cy, wish, aspect, fit = false) => {
+  if (fit) { const w = SJ_PLATE.w, h = Math.max(SJ_PLATE.h, w / aspect), ww = h * aspect; return { x: SJ_PLATE.w / 2 - ww / 2, y: SJ_PLATE.h / 2 - h / 2, w: ww, h }; }
   const w = Math.min(wish, SJ_PLATE.w, SJ_PLATE.h * aspect), h = w / aspect;
   const clamp = (v, half, max) => Math.max(half, Math.min(max - half, v));
   return { x: clamp(cx, w / 2, SJ_PLATE.w) - w / 2, y: clamp(cy, h / 2, SJ_PLATE.h) - h / 2, w, h };
@@ -79,5 +80,6 @@ function sjCamWish(s1, phone) {
     return { c: [whole.c[0] + (dx - whole.c[0]) * t, whole.c[1] + (dy - whole.c[1]) * t], w: whole.w + (300 - whole.w) * t };
   }
   const key = SJ.STATIONS[s1.at].key, S0 = sjSpotOf(key);
+  if (S0.split) return phone ? { c: S0.split[s1.u < .5 ? 0 : 1], w: 470 } : { ...whole, fit: true };
   return { c: S0.spot, w: phone ? Math.min(S0.cam, 460) : S0.cam };
 }

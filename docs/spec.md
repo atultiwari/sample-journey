@@ -186,14 +186,14 @@ Microbiology and coagulation appear in the same step. Coagulation shows a QC and
 | # | Label | Full name | Who | What the software records | What can go wrong | Source |
 |---|---|---|---|---|---|---|
 | 17 | CHECK | Technical check, including delta | Lab technician | Flags, comments, previous result beside the new one | Result does not fit: repeat, check for haemolysis or clot before accepting. **High potassium: look for haemolysis, but do not delay a true critical call.** Delta limits: per the lab's documented policy. CBC: check for clots when platelets are low; test within 8 hours, never past 24 hours (unless a stability study supports up to 48) | ISO 7.4.1.2; 7.4.1.7 d 1, d 4. 112A §7.3.1b p.40. 112B §5 p.26 (flowchart: delta check within limit before automated reporting; if not, do not auto-release, consult authorised personnel). ISO's "previous examination results" carries the same idea |
-| 18 | SIGN | Authorisation by a competent person | Pathologist or authorised person | **Approved On**, name of authoriser | Unauthorised release. After hours: trained staff issue a preliminary result, authoriser reviews next working day and issues final. Auto-verified reports must be marked "Auto verified" and can be suspended quickly | ISO 7.4.1.2; 6.2.3 b; 7.4.1.5; 7.4.1.6 j. 112A p.12, §6j i p.33, §6j iii, iv p.34. NABH AAC.6.d (p.60) |
+| 18 | SIGN | Approved by doctor | Dr. Prabhat Sharma | **Approved On**, name of authoriser | Unauthorised release. After hours: trained staff issue a preliminary result, authoriser reviews next working day and issues final. Auto-verified reports must be marked "Auto verified" and can be suspended quickly | ISO 7.4.1.2; 6.2.3 b; 7.4.1.5; 7.4.1.6 j. 112A p.12, §6j i p.33, §6j iii, iv p.34. NABH AAC.6.d (p.60) |
 
 ### Step 8. TELL (two different paths)
 
 | # | Label | Full name | Who | What the software records | What can go wrong | Source |
 |---|---|---|---|---|---|---|
-| 19 | CRITICAL | Critical alert: phone call with read-back | Lab staff to doctor | **Date, time, who called, who was told, result given, read-back done, any difficulty** | Doctor unreachable: **escalation** to the next person, per the lab's procedure. Critical list not displayed. Message sent with no check that it was understood. Patient has already gone home: doctor decides how to reach them | ISO 7.4.1.3 a–c; 7.4.1.4 c; 7.4.1.6 l. 112A §6j ii p.33. NABH AAC.6.g (p.60), AAC.9.h (p.63, Excellence: checks that care followed the alert). "Read-back" = ISO's "verification of accuracy of communication" |
-| 20 | REPORT | Routine report and notice | LIS and report counter | **Generated On**, delivery log, who collected a hard copy | Sent to the wrong number. Sensitive result sent with no counselling. Delay not told to the user. Report missing a required item | See below |
+| 19 | CRITICAL | Critical alert: phone call and message | Dr. Prabhat Sharma to the treating doctor | **Date, time, who called, who was told, result given, read-back done, any difficulty** | Doctor unreachable: **escalation** to the next person, per the lab's procedure. Critical list not displayed. Message sent with no check that it was understood. Patient has already gone home: doctor decides how to reach them | ISO 7.4.1.3 a–c; 7.4.1.4 c; 7.4.1.6 l. 112A §6j ii p.33. NABH AAC.6.g (p.60), AAC.9.h (p.63, Excellence: checks that care followed the alert). "Read-back" = ISO's "verification of accuracy of communication" |
+| 20 | REPORT | Report to doctor and patient | LIS and report counter | **Generated On**, delivery log, who collected a hard copy | Sent to the wrong number. Sensitive result sent with no counselling. Delay not told to the user. Report missing a required item | See below |
 
 **Why two paths:** a critical result needs a person to hear it, repeat it and act now. A routine report needs only to reach the right person safely. A WhatsApp message must never be the only critical alert: no read-back is possible in the required way (my reading of ISO 7.4.1.3 b).
 
@@ -328,7 +328,7 @@ Illustrated people, as the skill requires. Cast sheet goes to you first. Indian 
 | Phlebotomist | 3–9 | Asking name, reading wristband or request; gloved draw with evacuated holder; labelling beside the patient; dropping sharps in bin | 112A p.27 |
 | Sample carrier | 10 | Carrying rigid box in the lift, upright | 112A p.28 |
 | Lab technician | 11–17, 21–22 | Scanning; centrifuge with lid closed; reading LJ chart; phone call | 112A p.31 |
-| Pathologist | 18 | Reviewing and signing on screen | ISO 7.4.1.2 |
+| Dr. Prabhat Sharma | 18, 19 | At the microscope; on the phone with a form | ISO 7.4.1.2 |
 
 **Image source:** Higgsfield unless you say otherwise. About 3 credits per image by the skill's 2026 note; roughly 15–20 images, about 60 credits of your 7,200. I will confirm the current price before generating.
 
@@ -427,4 +427,10 @@ The lift ride is made from still images and code: the closed-door picture slides
 ## 14. Moving through the stations
 
 The player works like an old cassette player: First, Previous, Play, Pause, Stop, Next, Last. Durations do not change. Previous and Next move one station at a time, because each station has its own text. They hold on that station until Play is pressed, and Play carries on from the next station. The sample never animates backwards: the picture simply changes. Stepping does not replay the journeys between floors.
+
+## 15. Changes after the in-charge's review (3 Nov 2026)
+
+- **Station 18** is now "Approved by doctor". The pathologist is drawn from a photo of Dr. Prabhat Sharma, who leads this training, and his name is shown as the authoriser. No designation is shown.
+- **Station 19**: critical alerts at Shalby go by phone call and by message. The page shows both, in a split scene: Dr. Prabhat Sharma calls on the left, and the treating doctor answers on the landline on the right while a projection of her mobile shows only the critical value. The call with read-back stays the required part; the message never replaces it (ISO 7.4.1.3). Message practice: per Shalby, as told by Dr. Tiwari.
+- **Station 20**: no envelope travels from the lab. The patient's copy is printed at the counter when the patient asks. The treating doctor gets the full report as a PDF on WhatsApp, from "Shalby Lab Reports" (projection drawn in code, not a real app screen).
 

@@ -35,7 +35,7 @@
 | scenes/check.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | a372b097-4bf2-4329-8621-cfa52e037b4d | Awaiting approval |
 | scenes/sign.png (first version) | Rejected by the author: back to the door | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | abb021d9-d71c-4d9e-b7b3-dc0fa3fc0292 | Rejected |
 | scenes/critical.png (first version) | Rejected by the author: back to the door | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 7eded0aa-4b14-4c5c-a365-e5ec07184c4d | Rejected |
-| scenes/report.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 63a45246-718f-4e1c-ad99-51670c548fd1 | Awaiting approval |
+| scenes/report (envelope) | Replaced: the copy is printed at the counter | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 63a45246-718f-4e1c-ad99-51670c548fd1 | Replaced |
 | scenes/store.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 72f0d478-6cf9-4dbb-aca1-e6648927c1a3 | Awaiting approval |
 | scenes/discard.png | Station scene with cast, edit of its room | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 21bb5e2d-1ccf-474e-9c28-31e065ccb997 | Awaiting approval |
 | plates/lift.png | Empty generic lift, doors open | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 605b7e8a-4699-43e0-8439-1357abea100c | Awaiting approval |
@@ -47,5 +47,13 @@
 | scenes (first chamber sign) | Rejected: microscope too far | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 3a27eaa1-7162-4b1e-9cbe-b9aed27a590e | Rejected |
 | scenes (first chamber critical) | Rejected: microscope too far | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 692405f3-be01-401d-9513-d2ef51b62f5f | Rejected |
 | plates/cabin3.png | Chamber, desk rearranged (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 992387be-cfb8-422b-b8f8-d88ebf62c433 | Awaiting approval |
-| scenes/sign.png | Pathologist at the microscope (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | f33f5813-2fb5-4a2a-9d83-37a5841e8019 | Awaiting approval |
-| scenes/critical.png | Pathologist on the phone with a form (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 69cc13ba-b061-4552-ab86-1f00af87679d | Awaiting approval |
+| scenes/sign (cast pathologist) | Replaced at the in-charge's request | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | f33f5813-2fb5-4a2a-9d83-37a5841e8019 | Replaced |
+| scenes/critical (cast pathologist) | Replaced at the in-charge's request | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-02 | 69cc13ba-b061-4552-ab86-1f00af87679d | Replaced |
+| cast-prabhat.png | Character sheet of Dr. Prabhat Sharma, from his own photo, shared with consent for this project. The photo itself is not stored here | Higgsfield, Nano Banana (requested Pro; the job ran as nano_banana_2), 2 credits | 2026-11-03 | 3c60e3af-e6a3-4e9c-959a-cade52c5a61b | Awaiting approval |
+| scenes/sign.png | Dr. Prabhat Sharma at the microscope (edit) | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-03 | 502f78ac-76c4-441a-931c-0f8693ca26fb | Awaiting approval |
+| scenes/critical-left.png | Dr. Prabhat Sharma on the phone with a form (edit); left panel of station 19 | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-03 | 1f36c292-ec43-4f9f-ad73-aa147b9dd5ab | Awaiting approval |
+| scenes/clinician-call.png | Treating doctor on the landline with her mobile; right panel of station 19 | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-03 | 5c65608f-bad1-428e-a9e8-ee434bd29d3b | Awaiting approval |
+| scenes/clinician-mobile.png | Treating doctor reading her mobile; right panel of station 20 | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-03 | 2b6db351-2c22-42c8-af04-2969ae6ad827 | Awaiting approval |
+| scenes/report.png | Counter: report printed and handed over (edit); left panel of station 20 | Higgsfield, GPT Image 2.5, high, 2k, 2.75 credits | 2026-11-03 | 27f76f9d-1880-4e89-9931-4486aa0f2c3f | Awaiting approval |
+
+The split scenes (sketchbook/scenes/critical.jpg and report.jpg) are made from two panels each by tools/split-scenes.py (two crops, a gutter, an ink border). The phone projections are drawn in code (sketchbook/sj-split.js).
